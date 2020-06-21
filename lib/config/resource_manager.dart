@@ -1,0 +1,14 @@
+/*
+ * @Author       : djkloop
+ * @Date         : 2020-06-22 00:33:55
+ * @LastEditors  : djkloop
+ * @LastEditTime : 2020-06-22 00:36:16
+ * @Description  : 头部注释
+ * @FilePath     : /open_app/lib/config/resource_manager.dart
+ */
+
+class ImageHelper {
+  static String wrapAssets(String url) {
+    return "assets/images/$url";
+  }
+}

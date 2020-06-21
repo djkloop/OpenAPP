@@ -62,6 +62,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Loving Reading`
+  String get splash_title {
+    return Intl.message(
+      'Loving Reading',
+      name: 'splash_title',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

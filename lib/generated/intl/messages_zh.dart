@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function> {
     "app_name" : MessageLookupByLibrary.simpleMessage("开源App"),
     "autoBySystem" : MessageLookupByLibrary.simpleMessage("跟随系统"),
-    "fontYSHST" : MessageLookupByLibrary.simpleMessage("阅读字体")
+    "fontYSHST" : MessageLookupByLibrary.simpleMessage("阅读字体"),
+    "splash_title" : MessageLookupByLibrary.simpleMessage("爱上阅读")
   };
 }

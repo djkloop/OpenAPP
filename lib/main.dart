@@ -3,7 +3,7 @@
  * @Date 
 import 'package:oktoast/oktoast.dart';        : 2020-06-20 11:37:40
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-21 17:32:49
+ * @LastEditTime : 2020-06-22 00:45:12
  * @Description  : OpenAPP
  * @FilePath     : /open_app/lib/main.dart
  */
@@ -24,8 +24,17 @@ import 'package:open_app/config/storage_manager.dart';
 /// models
 import 'package:open_app/view_model/open_app_model/local_view_model.dart';
 import 'package:open_app/view_model/open_app_model/theme_view_model.dart';
-import 'package:open_app/view_model/login/login_view_model.dart';
-import 'package:open_app/ui/pages/login/login_page.dart';
+
+/// l10n
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:open_app/generated/l10n.dart';
+
+/// router_helper
+import 'open_app_route_helper.dart';
+
+/// pages
+import 'ui/pages/no_route/no_route_page.dart';
+import 'ui/pages/splash/splash_page.dart';
 
 var logger = new Logger();
 
@@ -57,11 +66,19 @@ class OpenAPP extends StatelessWidget {
             builder: (context, themeModel, localeModel, child) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Flutter MVVM Demo',
-            home: ChangeNotifierProvider(
-              create: (_) => LoginViewModel(),
-              child: LoginPage(),
-            ),
+            locale: localeModel.locale,
+            localizationsDelegates: const [
+              S.delegate,
+              GlobalCupertinoLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate
+            ],
+            onGenerateRoute: (RouteSettings settings) => onGenerateRouteHelper(
+                settings,
+                notFoundFallback: NoRoutePage()),
+            home: SplashPage(),
+            navigatorObservers: [FFNavigatorObserver()],
+            supportedLocales: S.delegate.supportedLocales,
           );
         }),
       ),

@@ -79,7 +79,7 @@ flutter:
   fonts:
     - family: yshst
       fonts:
-        - asset: fonts/yshst.ttf
+        - asset: assets/fonts/yshst.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/yshst.ttf
