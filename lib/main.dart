@@ -3,7 +3,7 @@
  * @Date 
 import 'package:oktoast/oktoast.dart';        : 2020-06-20 11:37:40
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-21 01:52:59
+ * @LastEditTime : 2020-06-21 17:32:49
  * @Description  : OpenAPP
  * @FilePath     : /open_app/lib/main.dart
  */
@@ -25,7 +25,7 @@ import 'package:open_app/config/storage_manager.dart';
 import 'package:open_app/view_model/open_app_model/local_view_model.dart';
 import 'package:open_app/view_model/open_app_model/theme_view_model.dart';
 import 'package:open_app/view_model/login/login_view_model.dart';
-import 'package:open_app/views/login/view_login.dart';
+import 'package:open_app/ui/pages/login/login_page.dart';
 
 var logger = new Logger();
 
@@ -60,7 +60,7 @@ class OpenAPP extends StatelessWidget {
             title: 'Flutter MVVM Demo',
             home: ChangeNotifierProvider(
               create: (_) => LoginViewModel(),
-              child: LoginView(),
+              child: LoginPage(),
             ),
           );
         }),

@@ -2,18 +2,20 @@
  * @Author       : djkloop
  * @Date         : 2020-06-20 11:50:48
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-20 14:07:55
+ * @LastEditTime : 2020-06-21 18:07:54
  * @Description  : 登录页
- * @FilePath     : /open_app/lib/views/login/view_login.dart
+ * @FilePath     : /open_app/lib/ui/pages/login/login_page.dart
  */
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_vant_kit/main.dart';
+import 'package:ff_annotation_route/ff_annotation_route.dart';
 
 /// model
 import 'package:open_app/view_model/login/login_view_model.dart';
 
-class LoginView extends StatelessWidget {
+@FFRoute(name: 'openapp://login-page', routeName: '登录页')
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<LoginViewModel>(context);
