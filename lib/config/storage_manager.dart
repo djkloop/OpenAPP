@@ -2,13 +2,12 @@
  * @Author       : djkloop
  * @Date         : 2020-06-20 13:56:04
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-20 14:35:36
+ * @LastEditTime : 2020-06-22 22:27:07
  * @Description  : 头部注释
  * @FilePath     : /open_app/lib/config/storage_manager.dart
  */
 import 'dart:io';
 
-import 'package:open_app/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:localstorage/localstorage.dart';
 import 'package:path_provider/path_provider.dart';
@@ -28,7 +27,6 @@ class StorageManager {
   /// 由于是同步操作会导致阻塞， 所以尽量减少存储内容
   static init() async {
     temporaryDirectory = await getTemporaryDirectory();
-    logger.d("temporaryDirectory -> ${temporaryDirectory.toString()}");
     sharedPreferences = await SharedPreferences.getInstance();
     localStorage = LocalStorage('LocalStorage');
     await localStorage.ready;

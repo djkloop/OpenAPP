@@ -2,7 +2,7 @@
  * @Author       : djkloop
  * @Date         : 2020-06-21 01:45:28
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-21 01:49:17
+ * @LastEditTime : 2020-06-23 00:28:30
  * @Description  : 头部注释
  * @FilePath     : /open_app/lib/view_model/open_app_model/local_view_model.dart
  */
@@ -18,7 +18,7 @@ class LocaleModel extends ChangeNotifier {
   ///
   static const kLocaleIndex = 'KLocaleIndex';
 
-  int _localeIndex;
+  int _localeIndex = 1;
 
   int get localIndex => _localeIndex;
 
@@ -33,7 +33,8 @@ class LocaleModel extends ChangeNotifier {
   }
 
   LocaleModel() {
-    _localeIndex = StorageManager.sharedPreferences.getInt(kLocaleIndex) ?? 0;
+    /// 默认是中文
+    _localeIndex = StorageManager.sharedPreferences.getInt(kLocaleIndex) ?? 1;
   }
 
   switchLocale(int index) {

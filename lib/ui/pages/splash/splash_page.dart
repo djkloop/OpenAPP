@@ -2,15 +2,23 @@
  * @Author       : djkloop
  * @Date         : 2020-06-22 00:11:08
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-22 01:18:24
+ * @LastEditTime : 2020-06-23 00:43:16
  * @Description  : 头部注释
  * @FilePath     : /open_app/lib/ui/pages/splash/splash_page.dart
  */
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+/// local data
 import 'package:open_app/config/resource_manager.dart';
+
+/// plugins
+import 'package:open_app/common/common_plugins.dart';
+
+/// l10n
 import 'package:open_app/generated/l10n.dart';
+import 'package:open_app/view_model/open_app_model/common_view_model.dart';
 
 class SplashPage extends StatefulWidget {
   @override
@@ -18,6 +26,46 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  // TimerUtil _timerUtil;
+  CommonViewModel commonViewModel = CommonViewModel();
+
+  List<String> _guideList = [
+    ImageHelper.wrapAssets('guide_book_1'),
+    ImageHelper.wrapAssets('guide_book_2'),
+    ImageHelper.wrapAssets('guide_book_3'),
+  ];
+
+  // List<Widget> _bannerList = new List();
+
+  // int _status = 0;
+  // int _count = 3;
+
+  @override
+  void initState() {
+    super.initState();
+    _init();
+  }
+
+  void _init() {
+    Stream.value(1)
+        .delay(
+      Duration(microseconds: 300),
+    )
+        .listen(
+      (_) {
+        /// 设置引导动画或者去加载splash
+        commonViewModel.setGuidBanner(true);
+        if (commonViewModel.isGuideBanner &&
+            ObjectUtil.isNotEmpty(_guideList)) {
+          // commonViewModel.setGuidBanner(false);
+          print("加载引导动画 ${commonViewModel.isGuideBanner}");
+        } else {
+          print("加载splash");
+        }
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -50,13 +98,13 @@ class _SplashPageState extends State<SplashPage> {
             ),
           ),
           Positioned(
-            bottom: 80,
+            bottom: 20,
             left: 0,
             right: 0,
             child: Image.asset(
-              ImageHelper.wrapAssets("splash_logo.png"),
-              width: 256,
-              height: 256,
+              ImageHelper.wrapAssets("splash_logo"),
+              width: 128,
+              height: 128,
               fit: BoxFit.contain,
             ),
           )

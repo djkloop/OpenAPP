@@ -49,6 +49,8 @@ dependencies:
   package_info: ^0.4.1
   # app相关路径
   path_provider: ^1.6.11
+  # 工具库
+  flustars: ^0.3.2
   # 日志
   logger: ^0.9.1
   logger_flutter:
