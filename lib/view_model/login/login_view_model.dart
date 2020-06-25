@@ -2,7 +2,7 @@
  * @Author       : djkloop
  * @Date         : 2020-06-20 11:52:54
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-20 12:28:56
+ * @LastEditTime : 2020-06-25 15:28:48
  * @Description  : 头部注释
  * @FilePath     : /open_app/lib/view_model/login/login_view_model.dart
  */

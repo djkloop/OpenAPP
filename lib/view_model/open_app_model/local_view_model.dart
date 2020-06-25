@@ -2,7 +2,7 @@
  * @Author       : djkloop
  * @Date         : 2020-06-21 01:45:28
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-23 00:28:30
+ * @LastEditTime : 2020-06-25 18:59:15
  * @Description  : 头部注释
  * @FilePath     : /open_app/lib/view_model/open_app_model/local_view_model.dart
  */
@@ -18,7 +18,7 @@ class LocaleModel extends ChangeNotifier {
   ///
   static const kLocaleIndex = 'KLocaleIndex';
 
-  int _localeIndex = 1;
+  int _localeIndex = 0;
 
   int get localIndex => _localeIndex;
 

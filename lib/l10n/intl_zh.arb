@@ -2,5 +2,10 @@
   "app_name": "开源App",
   "autoBySystem": "跟随系统",
   "fontYSHST": "阅读字体",
-  "splash_title": "爱上阅读"
+  "splash_title": "爱上阅读",
+  "skip_text": "跳过",
+  "done_text": "完成",
+  "guide_book_1": "读书应自己思索，自己做主。      --鲁迅",
+  "guide_book_2": "梦想，可以天花乱坠，理想，是我们一步一个脚印踩出来的坎坷道路。 --三毛",
+  "guide_book_3": "人若是看透了自己，便不会小看别人。 --老舍"
 }

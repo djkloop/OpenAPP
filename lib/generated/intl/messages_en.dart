@@ -23,7 +23,12 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function> {
     "app_name" : MessageLookupByLibrary.simpleMessage("OpenApp"),
     "autoBySystem" : MessageLookupByLibrary.simpleMessage("Auto System"),
+    "done_text" : MessageLookupByLibrary.simpleMessage("Done"),
     "fontYSHST" : MessageLookupByLibrary.simpleMessage("Read Font"),
+    "guide_book_1" : MessageLookupByLibrary.simpleMessage("You Know Some Birds Are Not Meant To Be Caged, Their Feathers Are Just Too Bright.   --The Shawshank Redemption"),
+    "guide_book_2" : MessageLookupByLibrary.simpleMessage("You Got A Dream, You Gotta Protect It.   --The Pursuit of Happyness"),
+    "guide_book_3" : MessageLookupByLibrary.simpleMessage("I Want To Put A Ding In The Universe.   --Steve Jobs"),
+    "skip_text" : MessageLookupByLibrary.simpleMessage("Skip"),
     "splash_title" : MessageLookupByLibrary.simpleMessage("Loving Reading")
   };
 }

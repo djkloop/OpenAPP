@@ -72,6 +72,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Skip`
+  String get skip_text {
+    return Intl.message(
+      'Skip',
+      name: 'skip_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Done`
+  String get done_text {
+    return Intl.message(
+      'Done',
+      name: 'done_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You Know Some Birds Are Not Meant To Be Caged, Their Feathers Are Just Too Bright.   --The Shawshank Redemption`
+  String get guide_book_1 {
+    return Intl.message(
+      'You Know Some Birds Are Not Meant To Be Caged, Their Feathers Are Just Too Bright.   --The Shawshank Redemption',
+      name: 'guide_book_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You Got A Dream, You Gotta Protect It.   --The Pursuit of Happyness`
+  String get guide_book_2 {
+    return Intl.message(
+      'You Got A Dream, You Gotta Protect It.   --The Pursuit of Happyness',
+      name: 'guide_book_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I Want To Put A Ding In The Universe.   --Steve Jobs`
+  String get guide_book_3 {
+    return Intl.message(
+      'I Want To Put A Ding In The Universe.   --Steve Jobs',
+      name: 'guide_book_3',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

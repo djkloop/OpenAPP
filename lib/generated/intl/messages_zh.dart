@@ -23,7 +23,12 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function> {
     "app_name" : MessageLookupByLibrary.simpleMessage("开源App"),
     "autoBySystem" : MessageLookupByLibrary.simpleMessage("跟随系统"),
+    "done_text" : MessageLookupByLibrary.simpleMessage("完成"),
     "fontYSHST" : MessageLookupByLibrary.simpleMessage("阅读字体"),
+    "guide_book_1" : MessageLookupByLibrary.simpleMessage("读书应自己思索，自己做主。      --鲁迅"),
+    "guide_book_2" : MessageLookupByLibrary.simpleMessage("梦想，可以天花乱坠，理想，是我们一步一个脚印踩出来的坎坷道路。 --三毛"),
+    "guide_book_3" : MessageLookupByLibrary.simpleMessage("人若是看透了自己，便不会小看别人。 --老舍"),
+    "skip_text" : MessageLookupByLibrary.simpleMessage("跳过"),
     "splash_title" : MessageLookupByLibrary.simpleMessage("爱上阅读")
   };
 }
