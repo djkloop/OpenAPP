@@ -2,7 +2,7 @@
  * @Author       : djkloop
  * @Date         : 2020-06-25 18:43:04
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-25 18:58:51
+ * @LastEditTime : 2020-06-25 20:17:48
  * @Description  : 头部注释
  * @FilePath     : /open_app/lib/ui/pages/splash/splash_guide.dart
  */
@@ -81,11 +81,13 @@ class _SplashGuideWidgetState extends State<SplashGuideWidget> {
   @override
   Widget build(BuildContext context) {
     const bodyStyle = TextStyle(fontSize: 19.0);
-    const pageDecoration = const PageDecoration(
-      titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.w700),
+    final pageDecoration = PageDecoration(
+      titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
       bodyTextStyle: bodyStyle,
       descriptionPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
-      pageColor: Colors.white,
+      pageColor: Theme.of(context).brightness == Brightness.light
+          ? Colors.white
+          : Colors.black54,
       imagePadding: EdgeInsets.zero,
     );
     return IntroductionScreen(
@@ -102,7 +104,8 @@ class _SplashGuideWidgetState extends State<SplashGuideWidget> {
             ),
           )
           .toList(),
-      onDone: widget.provider.splashGuideDone,
+      onDone: () => widget.provider.splashGuideDone(context),
+      onSkip: () => widget.provider.splashGuideDone(context),
       skipFlex: 1,
       nextFlex: 1,
       showSkipButton: true,

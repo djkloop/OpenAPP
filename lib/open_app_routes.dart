@@ -4,6 +4,7 @@
 // **************************************************************************
 const List<String> routeNames = <String>[
   'openapp://login-page',
+  'openapp://tab-navigator',
 ];
 
 class Routes {
@@ -15,4 +16,11 @@ class Routes {
   ///
   /// [routeName] : '登录页'
   static const String openappLoginPage = 'openapp://login-page';
+
+  /// '导航页'
+  ///
+  /// [name] : 'openapp://tab-navigator'
+  ///
+  /// [routeName] : '导航页'
+  static const String openappTabNavigator = 'openapp://tab-navigator';
 }

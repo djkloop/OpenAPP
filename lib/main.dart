@@ -3,7 +3,7 @@
  * @Date 
 import 'package:oktoast/oktoast.dart';        : 2020-06-20 11:37:40
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-22 22:26:30
+ * @LastEditTime : 2020-06-25 19:33:41
  * @Description  : OpenAPP
  * @FilePath     : /open_app/lib/main.dart
  */
@@ -67,6 +67,8 @@ class OpenAPP extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             locale: localeModel.locale,
+            theme: themeModel.themeData(),
+            darkTheme: themeModel.themeData(platformDarkMode: true),
             localizationsDelegates: const [
               S.delegate,
               GlobalCupertinoLocalizations.delegate,

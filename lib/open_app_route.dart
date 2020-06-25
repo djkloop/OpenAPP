@@ -6,6 +6,7 @@
 import 'package:flutter/widgets.dart';
 
 import 'ui/pages/login/login_page.dart';
+import 'ui/pages/tab/tab_navigator.dart';
 
 // ignore_for_file: argument_type_not_assignable
 RouteResult getRouteResult({String name, Map<String, dynamic> arguments}) {
@@ -15,6 +16,12 @@ RouteResult getRouteResult({String name, Map<String, dynamic> arguments}) {
         name: name,
         widget: LoginPage(),
         routeName: '登录页',
+      );
+    case 'openapp://tab-navigator':
+      return RouteResult(
+        name: name,
+        widget: TabNavigator(),
+        routeName: '导航页',
       );
     default:
       return const RouteResult(name: 'flutterCandies://notfound');

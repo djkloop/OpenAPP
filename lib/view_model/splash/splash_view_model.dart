@@ -2,7 +2,7 @@
  * @Author       : djkloop
  * @Date         : 2020-06-25 01:52:54
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-25 18:55:40
+ * @LastEditTime : 2020-06-25 20:17:06
  * @Description  : 头部注释
  * @FilePath     : /open_app/lib/view_model/splash/splash_view_model.dart
  */
@@ -10,6 +10,7 @@
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
+import 'package:open_app/open_app_routes.dart';
 
 /// model
 import 'package:open_app/view_model/open_app_model/common_view_model.dart';
@@ -66,7 +67,7 @@ class SplashViewModel with ChangeNotifier {
   /// 加载正式的页面
   // void _initMain() {}
 
-  void splashGuideDone() {
-    print("1-2");
+  void splashGuideDone(context) {
+    Navigator.pushReplacementNamed(context, Routes.openappTabNavigator);
   }
 }

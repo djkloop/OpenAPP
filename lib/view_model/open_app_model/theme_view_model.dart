@@ -2,7 +2,7 @@
  * @Author       : djkloop
  * @Date         : 2020-06-20 15:32:22
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-25 15:28:04
+ * @LastEditTime : 2020-06-25 20:08:44
  * @Description  : 头部注释
  * @FilePath     : /open_app/lib/view_model/open_app_model/theme_view_model.dart
  */
@@ -101,7 +101,7 @@ class ThemeModel with ChangeNotifier {
 
   /// 根据主题 明暗 和 颜色生成 对应的主题
   /// [dark]系统的Dark Mode
-  ThemeData themeData({bool platformDarkMode: false}) {
+  themeData({bool platformDarkMode: false}) {
     var isDark = platformDarkMode || _userDarkMode;
     Brightness brightness = isDark ? Brightness.dark : Brightness.light;
 
@@ -146,6 +146,11 @@ class ThemeModel with ChangeNotifier {
         subtitle1: themeData.textTheme.subtitle1.copyWith(
           textBaseline: TextBaseline.alphabetic,
         ),
+        bodyText2: isDark
+            ? themeData.textTheme.bodyText2.copyWith(
+                color: CupertinoColors.systemGrey4,
+              )
+            : themeData.textTheme.bodyText2,
       ),
 
       /// [textSelectionColor] 文本字段(如TextField)中文本被选中的颜色
