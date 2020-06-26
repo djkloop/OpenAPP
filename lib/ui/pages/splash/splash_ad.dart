@@ -2,7 +2,7 @@
  * @Author       : djkloop
  * @Date         : 2020-06-25 20:25:37
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-26 18:14:47
+ * @LastEditTime : 2020-06-26 18:19:02
  * @Description  : 广告
  * @FilePath     : /open_app/lib/ui/pages/splash/splash_ad.dart
  */
