@@ -2,7 +2,7 @@
  * @Author       : djkloop
  * @Date         : 2020-06-25 20:25:37
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-26 18:07:52
+ * @LastEditTime : 2020-06-26 18:14:47
  * @Description  : 广告
  * @FilePath     : /open_app/lib/ui/pages/splash/splash_ad.dart
  */
@@ -68,49 +68,54 @@ class _SplashAdWidgetState extends State<SplashAdWidget> {
                 top: 0,
                 child: SizedBox.shrink(),
               ),
-        Positioned(
-          top: 60,
-          right: 30,
-          child: GestureDetector(
-            onTap: () => widget.provider.splashGuideDone(context),
-            child: Container(
-              padding: EdgeInsets.symmetric(
-                vertical: 2,
-                horizontal: 4,
-              ),
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    // 渐变颜色 leftGradientColor、rightGradientColor
-                    CupertinoColors.activeBlue,
-                    CupertinoColors.activeGreen,
-                  ],
-                ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(2),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: ThemeHelper.stylePrimaryColor.withOpacity(0.8),
-                    offset: Offset(0, 8),
-                    blurRadius: 8.0,
-                    spreadRadius: -6.0,
+        widget.isShowAd
+            ? Positioned(
+                top: 60,
+                right: 30,
+                child: GestureDetector(
+                  onTap: () => widget.provider.splashGuideDone(context),
+                  child: Container(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 2,
+                      horizontal: 4,
+                    ),
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          // 渐变颜色 leftGradientColor、rightGradientColor
+                          CupertinoColors.activeBlue,
+                          CupertinoColors.activeGreen,
+                        ],
+                      ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(2),
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: ThemeHelper.stylePrimaryColor.withOpacity(0.8),
+                          offset: Offset(0, 8),
+                          blurRadius: 8.0,
+                          spreadRadius: -6.0,
+                        ),
+                      ],
+                    ),
+                    child: Text(
+                      "${S.of(context).splash_skip}",
+                      style: TextStyle(
+                        fontSize: 14,
+                        decoration: TextDecoration.none,
+                        letterSpacing: 2,
+                        color: CupertinoColors.white,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
-                ],
-              ),
-              child: Text(
-                "${S.of(context).splash_skip}",
-                style: TextStyle(
-                  fontSize: 14,
-                  decoration: TextDecoration.none,
-                  letterSpacing: 2,
-                  color: CupertinoColors.white,
-                  fontWeight: FontWeight.w400,
                 ),
+              )
+            : Positioned(
+                top: 0,
+                child: SizedBox.shrink(),
               ),
-            ),
-          ),
-        ),
         Positioned(
           /// test provider data && update provider data
           bottom: widget.provider.top,
