@@ -93,6 +93,16 @@ class S {
     );
   }
 
+  /// `Skip Ad`
+  String get splash_skip {
+    return Intl.message(
+      'Skip Ad',
+      name: 'splash_skip',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `You Know Some Birds Are Not Meant To Be Caged, Their Feathers Are Just Too Bright.   --The Shawshank Redemption`
   String get guide_book_1 {
     return Intl.message(

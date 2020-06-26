@@ -39,6 +39,10 @@ dependencies:
   oktoast: ^2.3.2
   # 图片缓存 https://github.com/renefloor/flutter_cached_network_image
   cached_network_image: ^2.2.0+1
+  # 动画 https://github.com/felixblaschke/simple_animations
+  simple_animations: ^2.2.1
+  # 工具库 https://github.com/felixblaschke/supercharged
+  supercharged: ^1.6.0
   # 引导页插件
   introduction_screen: ^1.0.8
   # 下拉刷新

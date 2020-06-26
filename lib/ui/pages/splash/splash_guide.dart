@@ -2,8 +2,8 @@
  * @Author       : djkloop
  * @Date         : 2020-06-25 18:43:04
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-25 20:17:48
- * @Description  : 头部注释
+ * @LastEditTime : 2020-06-25 20:32:22
+ * @Description  : 用户第一次安装或者更新版本的时候加载引导页
  * @FilePath     : /open_app/lib/ui/pages/splash/splash_guide.dart
  */
 

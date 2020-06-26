@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "guide_book_2" : MessageLookupByLibrary.simpleMessage("You Got A Dream, You Gotta Protect It.   --The Pursuit of Happyness"),
     "guide_book_3" : MessageLookupByLibrary.simpleMessage("I Want To Put A Ding In The Universe.   --Steve Jobs"),
     "skip_text" : MessageLookupByLibrary.simpleMessage("Skip"),
+    "splash_skip" : MessageLookupByLibrary.simpleMessage("Skip Ad"),
     "splash_title" : MessageLookupByLibrary.simpleMessage("Loving Reading")
   };
 }

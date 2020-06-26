@@ -2,7 +2,7 @@
  * @Author       : djkloop
  * @Date         : 2020-06-25 01:52:54
  * @LastEditors  : djkloop
- * @LastEditTime : 2020-06-25 20:17:06
+ * @LastEditTime : 2020-06-26 13:24:14
  * @Description  : 头部注释
  * @FilePath     : /open_app/lib/view_model/splash/splash_view_model.dart
  */
@@ -29,24 +29,23 @@ class SplashViewModel with ChangeNotifier {
   StreamSubscription _subscription;
 
   /// page data
-  double _top = 80;
+  double _top = 115;
   double get top => _top;
 
   void created(context) {
     _subscription = Stream.value(1).delay(Duration(seconds: 2)).listen((_) {
       /// 设置引导动画或者去加载splash
-      commonViewModel.setGuidBanner(true);
       if (commonViewModel.isGuideBanner && ObjectUtil.isNotEmpty(guideList)) {
-        // commonViewModel.setGuidBanner(false);
-        print("加载引导动画 ${commonViewModel.isGuideBanner}");
+        commonViewModel.setGuidBanner(false);
         guideList.forEach((image) {
           precacheImage(
               ImageHelper.getAssetImage(image, format: ImageFormat.webp),
               context);
         });
-        _initSplash();
+        _initGuide();
       } else {
         print("加载splash");
+        _initSplash();
       }
     });
   }
@@ -55,13 +54,15 @@ class SplashViewModel with ChangeNotifier {
     _subscription?.cancel();
   }
 
-  void _initSplash() {
+  void _initGuide() {
     status = 1;
     notifyListeners();
-    // Stream.value(1).delay(Duration(seconds: 2)).listen((_) {
-    //   _top = 150;
-    //   notifyListeners();
-    // });
+  }
+
+  /// 加载开屏
+  void _initSplash() {
+    status = 2;
+    notifyListeners();
   }
 
   /// 加载正式的页面
